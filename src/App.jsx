@@ -50,9 +50,9 @@ export const App = () => {
         onChange={onChangeTodoText}
         onClick={onClickTodoText}
       />
-      {imcompleteTodos.lenght >= 5 && (
+      {/* {imcompleteTodos.lenght >= 5 && (
         <p style={{ color: "red" }}>登録できるTodoは5個までです</p>
-      )}
+      )} */}
 
       <ImcompleteTodos
         imcompleteTodos={imcompleteTodos}
