@@ -42,18 +42,16 @@ export const App = () => {
     newcompleteTodos.splice(index, 1);
     setCompleteTodos(newcompleteTodos);
   };
-  console.log(imcompleteTodos.length);
+  const disable = imcompleteTodos.length >= 5;
   return (
     <>
       <InputTodo
         todoText={todoText}
         onChange={onChangeTodoText}
         onClick={onClickTodoText}
-        disabled={imcompleteTodos.lenght >= 5}
+        disabled={disable}
       />
-      {imcompleteTodos.lenght >= 5 && (
-        <p style={{ color: "red" }}>登録できるTodoは5個までです</p>
-      )}
+      {disable && <p style={{ color: "red" }}>登録できるTodoは5個までです</p>}
 
       <ImcompleteTodos
         imcompleteTodos={imcompleteTodos}
